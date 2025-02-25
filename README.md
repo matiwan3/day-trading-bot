@@ -1,7 +1,7 @@
 
 
-# day-trading-bot
-Creating a crypto bot for features trading (and profiting ofc)
+# Overview
+Creating a crypto bot for features trading for day trading for 1m, 5m, 15m and 1h intervals
 
 ## Why building a bot?
 To eliminate human emotions factors which mostly negatively influence trades causing to take impulsive actions and not to stick to the planned strategy.
