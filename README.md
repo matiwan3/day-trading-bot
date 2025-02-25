@@ -8,7 +8,7 @@ To eliminate human emotions factors which mostly negatively influence trades cau
 (And in a result losing money)
 
 ## Ai integration
-Use chatgpt API to analyze the live data fetched from the market (prices, movements, trends etc.) and not only rely on algorithm but also use AI capabilities to analyze and predict the movements.
+Use chatgpt API to analyze the live data fetched from the market (prices, movements, trends etc.) and not only rely on static algorithm and basic math calculations but also use AI capabilities to analyze and predict the movements.
 
 ## Can it really work?
 
