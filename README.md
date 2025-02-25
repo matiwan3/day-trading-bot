@@ -1,8 +1,5 @@
 
 
-[[_TOC_]]
-
-
 # day-trading-bot
 Creating a crypto bot for features trading (and profiting ofc)
 
@@ -18,4 +15,8 @@ Use chatgpt API to analyze the live data fetched from the market (prices, moveme
 ## Strategy implementation
 
 ## Strategy for trading
+
+## Algovibes bot
+![image](https://github.com/user-attachments/assets/4ee7a8ed-f657-4cf7-ad8c-8a71804ccc1d)
+
 
