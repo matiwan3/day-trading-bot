@@ -11,7 +11,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
 coin_pairs = ["OPUSDT", "SOLUSDT", "BTCUSDT", "ETHUSDT"]
-lookback = 1440; # 1440 minutes = 1 day | 15 minutes = 15 minutes | 60 minutes = 1 hour 
+intervals = {"1m": 1, "15m": 15, "1h": 60, "1d": 1440}
 
 client = HTTP(api_key=API_KEY, api_secret=API_SECRET)
 
@@ -51,7 +51,7 @@ def lookback_change(client, symbol, lookback_minutes=15,interval=1, ):
     if 'result' in response and 'list' in response['result'] and len(response['result']['list']) > 0:
         open_price = float(response['result']['list'][0][1])
         close_price = float(response['result']['list'][-1][4])
-        percentage_change = ((close_price - open_price) / open_price) * 100
+        percentage_change = round(((close_price - open_price) / open_price) * 100, 2)
         return percentage_change
     else:
         return None
@@ -59,7 +59,7 @@ def lookback_change(client, symbol, lookback_minutes=15,interval=1, ):
 def print_coins_data():
     for coin in coin_pairs:
         print(f'Latest price for {coin}: ', get_latest_price(client, coin))
-        print(f'{lookback} minute change for {coin}: ', lookback_change(client, coin, lookback))
+        print(f'{intervals["1d"]} change for {coin}: {lookback_change(client, coin, intervals["1d"])}%')
         print('\n')
         
 print_coins_data()
